@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contactes>
+    <contacte id="familiar">
+        <dades> <!-- Para añadir un atributo uso id dades id="personals"-->
+            <nom>nom</nom>
+            <cognoms>cognoms</cognoms>
+            <TelefonFix>TelefonFix</TelefonFix>
+            <TelefonMobil>TelefonMobil</TelefonMobil>
+        </dades>
+        <informacio> <!-- Para añadir un atributo uso id <dades id="informacio">-->
+            <edat>edat</edat>
+            <direccio id="principal">
+                <carrer>carrer</carrer>
+                <codiPostal>codiPostal</codiPostal>
+                <ciutat>ciutat</ciutat>
+            </direccio>
+            <dirreccionEmail>dirreccionEmail</dirreccionEmail>
+        </informacio>
+    </contacte>
+    <contacte id="familiar">
+        <dades> <!-- Para añadir un atributo uso id dades id="personals"-->
+            <nom>nom</nom>
+            <cognoms>cognoms</cognoms>
+            <TelefonFix>TelefonFix</TelefonFix>
+            <TelefonMobil>TelefonMobil</TelefonMobil>
+        </dades>
+        <informacio> <!-- Para añadir un atributo uso id <dades id="informacio">-->
+            <edat>edat</edat>
+            <direccio id="principal">
+                <carrer>carrer</carrer>
+                <codiPostal>codiPostal</codiPostal>
+                <ciutat>ciutat</ciutat>
+            </direccio>
+            <dirreccionEmail>dirreccionEmail</dirreccionEmail>
+        </informacio>
+    </contacte>
+</contactes>
