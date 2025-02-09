@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+1.3	Modifica el document afegir la següent informació:
+o	Edat
+o	direcció (carrer, codi postal, ciutat)
+o	direcció de email 
+-->
+<!-- Dentro del nodo raíz contacte, añadimos los nodos con sus datos, a excepción del nodo direccion -->
+<contacte>
+    <nom>nom</nom>
+    <cognoms>cognoms</cognoms>
+    <telefonFix>TelefonFix</telefonFix>
+    <telefonMobil>TelefonMobil</telefonMobil>
+    <edat>edat</edat>
+<!-- Para el nodo direccion, creamos nodos dentro para añadir los datos de forma ordenada y en cada nodo
+añadimos los datos-->
+    <direccio>
+        <carrer>carrer</carrer>
+        <codiPostal>codiPostal</codiPostal>
+        <ciutat>ciutat</ciutat>
+    </direccio>
+    <email>dirreccionEmail</email>
+</contacte>

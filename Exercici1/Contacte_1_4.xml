@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1.4	Modifica el document per que pugui emmagatzemar 2 contactes. -->
+<!-- 
+Para que podamos guardar más de un contacto, creamos el nodo raíz contactes y por cada contacto que queramos crear,
+añadimos dentro cada noto contacte con todos sus nodos
+-->
+<contactes>
+    <contacte>
+        <nom>nom</nom>
+        <cognoms>cognoms</cognoms>
+        <telefonFix>TelefonFix</telefonFix>
+        <telefonMobil>TelefonMobil</telefonMobil>
+        <edat>edat</edat>
+        <direccio>
+            <carrer>carrer</carrer>
+            <codiPostal>codiPostal</codiPostal>
+            <ciutat>ciutat</ciutat>
+        </direccio>
+        <email>correo1@gmail.com</email>
+    </contacte>
+    <contacte>
+        <nom>nom</nom>
+        <cognoms>cognoms</cognoms>
+        <telefonFix>TelefonFix</telefonFix>
+        <telefonMobil>TelefonMobil</telefonMobil>
+        <edat>edat</edat>
+        <direccio>
+            <carrer>carrer</carrer>
+            <codiPostal>codiPostal</codiPostal>
+            <ciutat>ciutat</ciutat>
+        </direccio>
+        <email>correo1@gmail.com</email>
+    </contacte>
+</contactes>

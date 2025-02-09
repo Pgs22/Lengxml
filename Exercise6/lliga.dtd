@@ -1,0 +1,68 @@
+<!-- 6. Crea el DTD associat al XML de la lliga que validi:-->
+<!--
+Para cada nodo añadimos un elemento seguido del nombre del tag empezando por el principal: lliga
+Añadimos el elemento principal que es el tag lliga y su elemento hijo equip y
+con el operador + indicamos la asiduidad del elemento hijo: Se podrá repetir una vez o más veces
+para poder crear más de un equipo y para que cada equipo tenga un único nombre, ubicación y director,
+-->
+<!ELEMENT lliga (equip+)>
+<!-- 
+6.2	Cada equip ha de tenir un únic nom, una localització i un director.
+Creamos el elemento hijo equip de lliga y añadimos sus elementos hijos que por defecto no se podrán repetir
+-->
+<!ELEMENT equip (nomEquip, partit, ubicacio, director, preparadors, resultats, jugadors)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT nomEquip (#PCDATA)>
+<!ELEMENT partit (#PCDATA)>
+<!ELEMENT ubicacio (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!-- 
+6.3	Un equip pot tenir múltiples preparadors. 
+En el tag preparadors creamos el elemento hijo preparador que por defecto, será único y con el
+operador + indicamos la asiduidad del elemento hijo:
+Se podrá repetir una vez o más veces para tener múltimples preparadors
+-->
+<!ELEMENT preparadors (preparador+)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT preparador (#PCDATA)>
+<!--
+6.4	El número de victòries i derrotes ha de existir (amb o sense valor).
+Usamos el operador ? para que se pueda repetir 0 veces o una vez,
+con esto conseguimos que pueda estar sin valor el número de victorias y derrotas
+-->
+<!ELEMENT resultats (victories?,derrotes?)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT victories (#PCDATA)>
+<!ELEMENT derrotes (#PCDATA)>
+<!--
+6.5	Cada equip nomé pot tenir un conjunt de jugadors
+6.6 Como a mínim cada equip ha de tenir un integrant.
+En el tag jugadors añadimos su elemento hijo jugador
+y con el operador + se podrá repetir el elemento jugador para poder añadir uno o más jugadores y
+ conseguir tener un conjunto de jugadores
+-->
+<!ELEMENT jugadors (jugador+)>
+<!--
+6.7	Cada integrant només pot tenir un nom, cognom i data de naixement 
+Al añadir el tag jugador con sus elementos, cada elemento del no se podrá repetir por defecto y
+cada jugador tendrá un único valor para el nonbre, apellido, fecha de nacimiento
+ -->
+<!ELEMENT jugador (nomJugador, cognom, dataNaixement, funcions)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT nomJugador (#PCDATA)>
+<!ELEMENT cognom (#PCDATA)>
+<!ELEMENT dataNaixement (#PCDATA)>
+<!--
+6.8 Cada integrant té una única funció principal i pot tenir múltiples funcions secundaries. 
+Añadimos al tag funcions sus elementos hijos, en el principal lo dejamos por defecto paa que no se pueda repetir
+-->
+<!ELEMENT funcions (principal, secundaries)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT principal (#PCDATA)>
+<!-- 
+Para que pueda tener multiples funciones secundarias el elemento secundarias,
+usamos el operador + para que podamos repetirlo una o más veces
+-->
+<!ELEMENT secundaries (secundaria+)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT secundaria (#PCDATA)>

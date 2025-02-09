@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Para asociar el XML al DTD y asociar las reglas de validadión, añadimos solo el nombre del fichero
+sin tener que añadir la ruta porque está en la misma carpeta.
+-->
+<!-- <!DOCTYPE grups SYSTEM "musica.dtd">-->
+<!DOCTYPE grups SYSTEM "musica.dtd">
+<grups>
+<!-- Añadimos los 4 atributos que hemos creado en el DTD para el nodo grup -->
+    <grup idNom="nom1" generePrincipal="rock" numIntegrants="6" idNumeroFans="fans1">
+        <nom >nom</nom>
+        <generes>
+            <genere>genere1classic</genere>
+        </generes>
+        <webOficial>web</webOficial>
+        <integrants>
+<!-- Añadimos el atributo idIntegrant que hemos creado en el DTD para el nodo integrant -->
+            <integrant idIntegrant="integrant1">
+                <numeroIntegrant>numeroIntegrant</numeroIntegrant>
+                <edat >edat</edat>
+            </integrant>
+        </integrants>
+        <numeroConcerts>numeroConcerts</numeroConcerts>
+        <numeroFans>numeroFans</numeroFans>
+    </grup>
+</grups>

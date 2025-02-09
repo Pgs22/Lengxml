@@ -1,49 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Creamos el nodo principal lliga para poder agrupar los equipos de fútbol-->
+<!DOCTYPE lliga SYSTEM "lliga.dtd">
 <lliga>
-<!-- Creamos el nodo equip dentro del nodo principal lliga para poder crear varios equipos
-dentro de cada equip tenemos estos elementos: nomEquip, partit, ubicacio, director, preparadors, resultats, jugadors
--->
     <equip>
         <nomEquip>Barcelona</nomEquip>
         <partit>League</partit>
         <ubicacio>Campnou</ubicacio>
         <director>Joan LaPorta</director>
-<!-- Creamos el nodo preparadors para poder agrupar varios preparadores a un equipo y 
-dentro de cada preparador se añadirá el texto, su nombre -->  
         <preparadors>
             <preparador>Hansi Flick</preparador>
             <preparador>preparador2</preparador>            
         </preparadors>
-<!-- Creamos el nodo resultats para poder agrupar de forma ordenada los resultados, 
-dentro creamos el nodo victories con sus datos y el nodo derrotes con sus datos --> 
         <resultats>
             <victories>14</victories>
             <derrotes>5</derrotes>          
         </resultats>      
-<!-- Creamos el nodo jugadors dentro del nodo equip para agrupar todos los jugadores
-y dentro de nodo jugadors crearemos varios nodos con el mismo nombre jugador donde tendremos
-estos elementos para cada jugador: nomJugador, dataNaixement, funcions
--->
         <jugadors>
             <jugador>
                 <nomJugador>Lamine</nomJugador>
                 <cognom>Yamal</cognom>
                 <dataNaixement>13 de julio del 2007</dataNaixement>
-<!-- Creamos el nodo funcions dentro del nodo jugador, para poder agrupar de forma ordenada las funciones
-de cada jugador, y dentro creamos dos nodos, principal y secundaries
-dentro del nodo principal añadimos sus datos --> 
                 <funcions>
                     <principal>delantero</principal>
-<!-- Dentro del nodo secundaries queremos añadir más de un elemento y por eso lo agrupamos y dentro creamos
-varios elementos con el nombre secundaria que se podrán repetir-->
                     <secundaries>
                         <secundaria>extremo derecho</secundaria>
                         <secundaria>media punta</secundaria>
                     </secundaries>
                 </funcions>
             </jugador>
-<!-- Creamos un segundo jugador dentro del mismo equipo -->
             <jugador>
                 <nomJugador>Pablo</nomJugador>
                 <cognom>Páez Gavira</cognom>
@@ -57,7 +40,6 @@ varios elementos con el nombre secundaria que se podrán repetir-->
                 </funcions>
             </jugador>
         </jugadors>
-<!-- Creamos el segundo equipo y dentro sus jugadores igual que el equipo anterior-->
     </equip>
     <equip>
         <nomEquip>Real Madrid</nomEquip>

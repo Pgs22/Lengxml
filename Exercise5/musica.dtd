@@ -1,0 +1,51 @@
+<!-- 5	Crea el DTD associat al XML amb informació de grups de música. Ha de validar que: -->
+<!--
+Para cada nodo añadimos un elemento seguido del nombre del tag empezando por el principal: grups
+Añadimos el elemento principal que es el tag grups y su elemento hijo grup y
+con el operador + indicamos la asiduidad del elemento hijo: Se repetirá una vez o más veces
+para poder crear más de un grupo de música.
+-->
+<!ELEMENT grups (grup+)>
+<!-- Añadimos el elemento grup y dentro sus elementos 
+Al elemento Web oficial: Para que sea opcional y solo pueda haber uno, añadimos el operador ? 
+Al elemento numeroConcierts: Para que Opcional y múltiples añadimos el operador *
+-->
+<!ELEMENT grup (nom, generes, webOficial?, integrants, numeroConcerts*, numeroFans)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT nom (#PCDATA)>
+<!-- Añadimos al elemento generes dentro su elemento genere para poder agrupar varios generos con el operador + 
+y sea obligatori y puede haber uno o más de uno -->
+<!ELEMENT generes (genere+)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT genere (#PCDATA)>
+<!ELEMENT webOficial (#PCDATA)>
+<!-- Añadimos al elemento integrants dentro su elemento integrant para poder agrupar varios integrantes con el operador +  -->
+<!ELEMENT integrants (integrant+)>
+<!-- Añadimos al elemento integrant y dentro sus elementos -->
+<!ELEMENT integrant (numeroIntegrant, edat)>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT numeroIntegrant (#PCDATA)>
+<!ELEMENT edat (#PCDATA)>
+<!ELEMENT numeroConcerts (#PCDATA)>
+<!ELEMENT numeroFans (#PCDATA)>
+<!--
+Añadimos al elemento grup estas reglas:
+Creamos atributo idNom: Para indicar el nombre del grupo de música que no se podrá repetir y será único
+Creamos atributo generePrincipal: Para identificar el principal “rock”,“pop”,”trap”, “classic”
+Creamos atributo numIntegrants: Para almacenar el número de integrantes cada vez que se cree un grupo
+Creamos atributo idNumeroFans: Obligatori y único
+-->
+<!ATTLIST grup 
+    idNom ID #REQUIRED
+    generePrincipal (rock|pop|trap|classic) #REQUIRED
+    numIntegrants CDATA #REQUIRED
+    idNumeroFans ID #REQUIRED
+>
+<!-- 
+Añadimos al elemento integrant estas reglas para conseguir que los dos elementos dentro de cada
+integrante sean obligarios y únicos:
+Elemento edat: Obligatori y único
+-->
+<!ATTLIST integrant
+    idIntegrant ID #REQUIRED
+>

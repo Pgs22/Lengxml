@@ -1,54 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<musica>
+<!-- Creamos el nodo principal grups para poder agrupar varios grupos de música-->
+<grups>
+<!-- Creamos el nodo grup dentro del nodo principal grups
+dentro de cada grup tenemos estos elementos: nom, genere, webOficial, integrants, numeroConcerts, numeroFans
+-->
     <grup>
         <nom>nom</nom>
         <genere>genere</genere>
-        <web>web</web>
+        <webOficial>web</webOficial>
+<!-- Creamos el nodo integrants para poder agrupar varios integrantes a un grupo de música y 
+dentro de cada integrante se añadirá cada integrant -->        
         <integrants>
             <integrant>
+<!-- Y dentro del nodo integrant creamos el tag número de integrante y el tag edat para añadir sus datos-->
+                <numeroIntegrant>numeroIntegrant</numeroIntegrant>
                 <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
-            </integrant>
-                <integrant>
-                <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
             </integrant>
         </integrants>
+<!-- Creamos los tag dentro de el nodo grup para añadir sus datos-->
+        <numeroConcerts>numeroConcerts</numeroConcerts>
+        <numeroFans>numeroFans</numeroFans>
     </grup>     
-    <grup>
-        <nom>nom</nom>
-        <genere>genere</genere>
-        <web>web</web>
-        <integrants>
-            <integrant>
-                <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
-            </integrant>
-                <integrant>
-                <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
-            </integrant>
-        </integrants>
-    </grup>
-        <grup>
-        <nom>nom</nom>
-        <genere>genere</genere>
-        <web>web</web>
-        <integrants>
-            <integrant>
-                <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
-            </integrant>
-                <integrant>
-                <edat>edat</edat>
-                <concerts>concerts</concerts>
-                <fans>fans</fans>
-            </integrant>
-        </integrants>
-    </grup>
-</musica>
+</grups>

@@ -1,0 +1,34 @@
+<!--
+4	Crea el DTD associat al XML amb informació de contactes i afegeix-hi regles de validació -->
+<!-- 
+Para cada nodo añadimos un elemento seguido del nombre del tag empezando por el principal: contactes
+Añadimos el elemento principal que es el tag contactes y añadimos su elemento hijo contacte con 
+el operador + indicamos la asiduidad del elemento hijo: Se podrá repetir una vez o más veces
+para poder crear más de un contacto
+-->
+<!ELEMENT contactes (contacte+)>
+<!-- 
+Para que cada contacto tenga un único nombre, apellido, telefono... Creamos un elemento con el nombre
+del tag contacte y añadimos los elementos hijos que por defecto no se podrán repetir, a excepción de direccio, que 
+añadimos el operador + para que podamos añadir más de una dirección
+-->
+<!ELEMENT contacte (nom, cognoms, telefonFix, telefonMobil, edat, direccio+, email)>
+<!-- Para diferenciar si es un contacto familiar o no, usamos el atributo que lo diferencia usando el operador | que nos permie
+seleccionar una de las opciones y la regla #REQUIRED para que sea obligatorio seleccionar la opción -->
+<!ATTLIST contacte familiar (si|no) #REQUIRED>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT cognoms (#PCDATA)>
+<!ELEMENT telefonFix (#PCDATA)>
+<!ELEMENT telefonMobil (#PCDATA)>
+<!ELEMENT edat (#PCDATA)>
+<!-- Creamos un elemento direccio para añadir los elementos hijos de cada direccion que no se podrán repetir-->
+<!ELEMENT direccio (carrer, codiPostal, ciutat)>
+<!-- Para diferenciar si es la dirección principal o no, usamos el atributo que lo diferencia usando el operador | que nos permie
+seleccionar una de las opciones y la regla #REQUIRED para que sea obligatorio seleccionar la opción -->
+<!ATTLIST direccio principal (si|no) #REQUIRED>
+<!-- Añadimos la regla #PCDATA para que solo pueda contener texto -->
+<!ELEMENT carrer (#PCDATA)>
+<!ELEMENT codiPostal (#PCDATA)>
+<!ELEMENT ciutat (#PCDATA)>
+<!ELEMENT email (#PCDATA)>

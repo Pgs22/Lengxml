@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+1.5	Afegeix un atribut que ens indiqui si un contacte es un familiar o no, 
+i si una direcció es el domicili principal o no. -->
+<!-- 
+Para añadir un atributo que identifique si es familiar o no, repetimos el nodo contacte con las dos combinaciones
+también añadimos las combinaciones de direccio, para diferencia si es principal o no.
+El total de combinaciones posibles son 4:
+Si es familiar y si es la direccion principal
+Si es familiar y si no es la direccion principal
+Si no es familiar y si es la direccion principal
+Si no es familiar y si no es la direccion principal
+-->
+<contactes>
+    <contacte familiar="si">
+        <nom>nom</nom>
+        <cognoms>cognoms</cognoms>
+        <telefonFix>TelefonFix</telefonFix>
+        <telefonMobil>TelefonMobil</telefonMobil>
+        <edat>edat</edat>
+        <direccio principal="si">
+            <carrer>carrer</carrer>
+            <codiPostal>codiPostal</codiPostal>
+            <ciutat>ciutat</ciutat>
+        </direccio>
+        <email>correo1@gmail.com</email>
+    </contacte>
+    <contacte familiar="no">
+        <nom>nom</nom>
+        <cognoms>cognoms</cognoms>
+        <telefonFix>TelefonFix</telefonFix>
+        <telefonMobil>TelefonMobil</telefonMobil>
+        <edat>edat</edat>
+        <direccio principal="no">
+            <carrer>carrer</carrer>
+            <codiPostal>codiPostal</codiPostal>
+            <ciutat>ciutat</ciutat>
+        </direccio>
+        <email>correo1@gmail.com</email>
+    </contacte>
+</contactes>

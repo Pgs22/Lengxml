@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+1	Crear un document en XML vàlid amb  la informació d’un únic contacte. 
+1.2	Modela como a mínim la següent informació:
+o	Nom, cognoms
+o	telèfon fix, telèfon mòbil
+-->
+<!-- Para crear un unico contacto abrimos creamos el nodo raíz contacte 
+y dentro del nodo raíz creamos el resto de nodos que contendrán los datos del contacto -->
+<contacte>
+    <nom>nom</nom>
+    <cognoms>cognoms</cognoms>
+    <telefonFix>TelefonFix</telefonFix>
+    <telefonMobil>TelefonMobil</telefonMobil>
+</contacte>
